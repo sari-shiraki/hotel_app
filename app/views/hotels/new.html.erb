@@ -40,11 +40,10 @@
                 <p>ルーム画像</p>
                 <p class="necessary">必須</p>
               </div>
-              <% if @hotel.image? %>
-                <%= image_tag @hotel.image.url %>
-              <% else %>
-                <%= f.file_field :image, accept: 'https://presite-potepancamp-rails-02.herokuapp.com/assets/room01.jpg' %>
-              <% end %>  
+              
+              <%= f.label :image 'image' %>
+              <%= f.file_field :image %>
+               
             </li>
               
               <%= f.submit '登録' %>

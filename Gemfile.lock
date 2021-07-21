@@ -218,9 +218,10 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
-  carrierwave
+  carrierwave (~> 2.0)
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  mini_magick
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)

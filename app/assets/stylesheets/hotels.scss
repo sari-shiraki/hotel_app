@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .link_to_font {
   text-decoration: none;
+  
   color: #333333;
 }
 
@@ -12,6 +13,7 @@
 
 .index_container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .hotel_content {

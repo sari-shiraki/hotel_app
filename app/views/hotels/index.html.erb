@@ -3,13 +3,17 @@
   <div class="index_container">
     <% @hotels.each do |hotel| %>
       <%= link_to hotel_path(hotel), class: "link_to_font" do %>
-        <div class = "hotel_content">
-          <%= image_tag "/room01.jpeg", class: "room_image" %>
+        <% if @hotel.image? %>
+          <%= image_tag @hotel.image.url %>
+        <% else %>
+          <%= image_tag "https://presite-potepancamp-rails-02.herokuapp.com/assets/room01.jpg"%>
+        <% end %>  
           <div class="hotel_content_text">
             <p class="room_name"><%= hotel.room_name %></p>
             <p class="room_adress"><%= hotel.adress %></p>
             <p class="room_price">¥<%= hotel.price %></p>
           </div>
+          <%= link_to "削除", hotel_path(hotel), method: :delete, class: "link_to_font delete" %>
         </div>
       <% end %>  
     <% end %>

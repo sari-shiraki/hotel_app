@@ -21,6 +21,12 @@ class HotelsController < ApplicationController
     @hotel = Hotel.find(params[:id])
   end  
   
+  def destroy
+    @hotel = Hotel.find(params[:id])
+    @hotel.destroy
+    redirect_to :hotels
+  end  
+  
   private
   def hotel_params
     params.require(:hotel).permit(:room_name, :introduction, :price, :adress, :image)
