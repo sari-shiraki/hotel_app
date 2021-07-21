@@ -1,0 +1,18 @@
+<div class="container">
+  <p>検索結果：<%= @hotels.count %>件</p>
+  <div class="index_container">
+    <% @hotels.each do |hotel| %>
+      <%= link_to hotel_path(hotel), class: "link_to_font" do %>
+        <div class = "hotel_content">
+          <%= image_tag "/room01.jpeg", class: "room_image" %>
+          <div class="hotel_content_text">
+            <p class="room_name"><%= hotel.room_name %></p>
+            <p class="room_adress"><%= hotel.adress %></p>
+            <p class="room_price">¥<%= hotel.price %></p>
+          </div>
+        </div>
+      <% end %>  
+    <% end %>
+    <%= link_to "新規投稿", new_hotel_path %> 
+  </div>  
+</div>

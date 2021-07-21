@@ -1,0 +1,59 @@
+<div class="new_container container">
+  <div class="side_menus">
+    
+  </div>
+  <div class="main_area">
+    <div class="work_area">
+      <h2>ルーム情報登録</h2>
+        <%= form_for @hotel do |f| %>
+          <ul class="room_information_input">
+            <li>
+              <div class="room_label">
+                <p>ルーム名</p>
+                <p class="necessary">必須</p>
+              </div>
+              <%= f.text_field :room_name %>
+            </li>
+            <li>
+              <div class="room_label">
+                <p>ルーム紹介</p>
+                <p class="necessary">必須</p>
+              </div>
+              <%= f.text_field :introduction %>
+            </li>
+            <li>
+              <div class="room_label">
+                <p>料金</p>
+                <p class="necessary">必須</p>
+              </div>
+              <%= f.text_field :price %>
+            </li>
+            <li>
+              <div class="room_label">
+                <p>住所</p>
+                <p class="necessary">必須</p>
+              </div>
+              <%= f.text_field :adress %>
+            </li>
+            <li>
+              <div class="room_label">
+                <p>ルーム画像</p>
+                <p class="necessary">必須</p>
+              </div>
+              <% if @hotel.image? %>
+                <%= image_tag @hotel.image.url %>
+              <% else %>
+                <%= f.file_field :image, accept: 'https://presite-potepancamp-rails-02.herokuapp.com/assets/room01.jpg' %>
+              <% end %>  
+            </li>
+              
+              <%= f.submit '登録' %>
+          <% end %>
+          
+        </ul>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>

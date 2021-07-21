@@ -11,6 +11,24 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <%= link_to top_path do %>
+          <div class="header_logo">
+            <img alt="サイトのロゴ写真" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
+          </div>
+      <% end %>  
+      <div class="header_search">
+        <input></input>
+        <input></input>
+      </div>
+      <div class="user_menus">
+        <h4>名前</h4>
+        <img class="header_user_image" alt="ユーザ写真" src ="https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg">
+      </div>
+    </header>
+      <%= yield %>
+    <footer>
+      <p>©︎ 2020 POTEPAN.INC.</p>
+    </footer>
   </body>
 </html>

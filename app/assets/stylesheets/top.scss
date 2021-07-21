@@ -1,0 +1,82 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.top_container {
+  background-image: url("	https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg");
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+}
+
+.top_search_box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 500px;
+  height: 300px;
+  margin-top: 180px;
+  margin-left: 30px;
+  padding: 8px 20px;
+}
+
+.top_search_box .search_message {
+  font-styles: verdana;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+
+.top_search {
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.8;
+}
+
+.top_search > p {
+  color: #333333;
+  font-size: 15px;
+}
+
+.top_search > input {
+  font-size: 20px;
+  padding: 7px;
+}
+
+.top_search_box .search_button {
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: #4b8fe2;
+  color: #ffffff;
+  border-radius: 5px;
+  border-color: #0361cc;
+  width: 100%;
+}
+
+.recommend_area {
+  margin-top: 300px;
+  margin-bottom: 50px;
+}
+
+.recommend_area ul {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.recommend_area .recommend_area_img > img {
+  width: 250px;
+  height: 360px;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+.recommend_area ul li {
+  position: relative;
+}
+
+.recommend_area ul li > p {
+  position: absolute;
+  top: 280px;
+  left: 120px;
+  color: #ffffff;
+}
