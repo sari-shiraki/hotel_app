@@ -23,6 +23,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  
 } 
 
 
@@ -54,7 +55,7 @@ header {
   margin-left: auto;
 }
 
-.user_menus > img {
+.header_user_image {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -65,13 +66,13 @@ footer {
   background-color: #000000;
   color: #ffffff;
   text-align: center;
-  height: 180px;
+  height: 200px;
   line-height: 180px;
 }
 
 .container {
   max-width: 1200px;
+  padding-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 50px;
 }

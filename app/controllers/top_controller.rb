@@ -1,4 +1,5 @@
 class TopController < ApplicationController
-  def index
+  def hello
+  
   end
 end

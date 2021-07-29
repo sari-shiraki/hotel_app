@@ -1,4 +1,35 @@
-<%= image_tag "/room01.jpeg", class: "room_image" %>
-<%= @hotel.room_name %>
-<%= @hotel.adress %>
-<%= @hotel.price %>
+<div class="container show_container">
+  <div class="room_information">
+    <% if @hotel.image.attached? %>
+      <%= image_tag @hotel.image, class:"room_image_information" %>
+    <% else %>
+      <%= image_tag "https://presite-potepancamp-rails-02.herokuapp.com/assets/room01.jpg", class:"room_image" %>
+    <% end %>
+    <div class="room_info">
+      <img class="header_user_image" alt="ユーザ写真" src ="https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg">
+      <div>
+        <h2><%= @hotel.room_name %></h2>
+        <p><%= @hotel.adress %></p>
+      </div>
+    </div>
+    <p><%= @hotel.introduction %></p>
+  </div>
+  <div class="reservation_form">
+    <%= form_for @hotel do |f| %>
+      <div class="reservation_form_content">
+        <p class="price-font">¥<%= @hotel.price %>/日</p>
+        <div class="label">
+          <p>開始日</p>
+          <p><%= f.date_field :created_at, class:"reservation_input" %></p>
+        </div>
+        <div class="label">
+          <p>終了日</p>
+          <p><%= f.date_field :updated_at, class:"reservation_input" %></p>
+        </div>
+        <p class="label">人数</p>
+        <input type=number, class="reservation_input">
+      </div>
+      <%= f.submit '予約する', class:"button submit_button" %>
+    <% end %>
+  </div>
+</div>

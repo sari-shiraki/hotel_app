@@ -1,55 +1,53 @@
-<div class="new_container container">
+<div class="new_container">
   <div class="side_menus">
-    
+    <p>基本情報</p>
   </div>
   <div class="main_area">
     <div class="work_area">
-      <h2>ルーム情報登録</h2>
-        <%= form_for @hotel do |f| %>
+      <h2 class="under_line">ルーム情報登録</h2>
+        <%= form_with model:@hotel, local: true do |f| %>
           <ul class="room_information_input">
-            <li>
+            <li class="under_line">
               <div class="room_label">
-                <p>ルーム名</p>
+                <h3>ルーム名</h3>
                 <p class="necessary">必須</p>
               </div>
-              <%= f.text_field :room_name %>
+              <%= f.text_field :room_name, class:"input_area" %>
             </li>
-            <li>
+            <li class="under_line">
               <div class="room_label">
-                <p>ルーム紹介</p>
+                <h3>ルーム紹介</h3>
                 <p class="necessary">必須</p>
               </div>
-              <%= f.text_field :introduction %>
+              <%= f.text_field :introduction, class:"input_area introduction" %>
             </li>
-            <li>
+            <li class="under_line">
               <div class="room_label">
-                <p>料金</p>
+                <h3>料金</h3>
                 <p class="necessary">必須</p>
               </div>
-              <%= f.text_field :price %>
+              <%= f.text_field :price, class:"input_area" %>
             </li>
-            <li>
+            <li class="under_line">
               <div class="room_label">
-                <p>住所</p>
+                <h3>住所</h3>
                 <p class="necessary">必須</p>
               </div>
-              <%= f.text_field :adress %>
+              <%= f.text_field :adress, class:"input_area" %>
             </li>
-            <li>
+            <li class="under_line">
               <div class="room_label">
-                <p>ルーム画像</p>
+                <h3>ルーム画像</h3>
                 <p class="necessary">必須</p>
               </div>
               
-              <%= f.label :image 'image' %>
               <%= f.file_field :image %>
-               
             </li>
+            
               
-              <%= f.submit '登録' %>
-          <% end %>
-          
-        </ul>
+            <%= f.submit '登録', class:"button submit_button" %>
+          </ul>
+        <% end %>
         
       </div>
       
