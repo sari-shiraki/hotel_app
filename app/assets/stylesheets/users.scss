@@ -59,3 +59,36 @@
   font-size: 15px;
   color: black;
 }
+
+/* profile */
+
+.side_menus h2 {
+  font-weight: normal;
+}
+
+.header_user_image.image {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.information_input li > p {
+  margin-left: 40px;
+}
+
+.information_input li > p > input {
+  width: 700px;
+  height: 40px;
+  margin-left: 40px;
+  font-size: 16px;
+}
+.information_input li > p > textarea {
+  width: 700px;
+  height: 100px;
+  font-size: 16px;
+}
+
+.button.profile_button {
+  width: 200px;
+}

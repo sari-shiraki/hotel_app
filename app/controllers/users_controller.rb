@@ -28,6 +28,12 @@ class UsersController < ApplicationController
   end
   
   def update
+    @user = User.find(params[:id])
+    if @user.update(params.require(:user).permit(:name, :introduction, :image))
+      redirect_to edit_user_url
+    else
+      render :edit
+    end  
   end
   
   def destroy

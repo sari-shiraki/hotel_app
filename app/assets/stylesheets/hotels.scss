@@ -58,7 +58,7 @@
 
 /*new*/
 
-.new_container {
+.containers {
   display: flex;
   width: 100%;
 }
@@ -71,10 +71,12 @@
   padding-top: 10px;
 }
 
-.side_menus > p {
+.side_menus .side_menus_blue {
   color: #4b8fe2;
   border-right: solid;
   font-size: 20px;
+  text-decoration: none;
+  padding-right: 10px;
 }
 
 .main_area {
@@ -99,22 +101,21 @@
   border-bottom: solid #eaedef 1px;
 }
 
-.room_information_input {
+.information_input {
   margin-left: -3em;
 }
 
-.work_area .room_information_input >li {
+.work_area .information_input >li {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 50px;
   padding-bottom: 30px;
 }
 
-.room_information_input .room_label {
+.information_input .input_label {
   display: flex;
 }
 
-.room_information_input .room_label > h3 {
+.information_input .input_label > h3 {
   font-size: 18px;
 }
 
