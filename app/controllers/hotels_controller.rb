@@ -10,8 +10,9 @@ class HotelsController < ApplicationController
   
   def create
     @hotel = Hotel.new(hotel_params)
-    @hotel.user_id = current_user.id
+    @hotel.user_id = @current_user
     if @hotel.save
+      binding.pry
       flash[:notice] = "Room was successfully created."
       redirect_to :hotels
     else

@@ -5,7 +5,7 @@
   <div class="main_area">
     <div class="work_area">
       <h2 class="under_line">ルーム情報登録</h2>
-        <%= form_with model:@hotel, local:true do |f| %>
+        <%= form_with model: @hotel, local: true do |f| %>
           <ul class="room_information_input">
             <li class="under_line">
               <div class="room_label">
@@ -19,7 +19,7 @@
                 <h3>ルーム紹介</h3>
                 <p class="necessary">必須</p>
               </div>
-              <%= f.text_field :introduction, class:"input_area introduction" %>
+              <%= f.text_area :introduction, class:"input_area introduction" %>
             </li>
             <li class="under_line">
               <div class="room_label">
