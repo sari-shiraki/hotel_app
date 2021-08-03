@@ -10,6 +10,7 @@ class HotelsController < ApplicationController
   
   def create
     @hotel = Hotel.new(hotel_params)
+    @hotel.user_id = current_user.id
     if @hotel.save
       flash[:notice] = "Room was successfully created."
       redirect_to :hotels
@@ -20,6 +21,7 @@ class HotelsController < ApplicationController
   
   def show
     @hotel = Hotel.find(params[:id])
+    @user = User.find_by(id: @hotel.user_id)
   end  
   
   def destroy
@@ -30,6 +32,6 @@ class HotelsController < ApplicationController
   
   private
   def hotel_params
-    params.require(:hotel).permit(:room_name, :introduction, :price, :adress, userimage)
+    params.require(:hotel).permit(:room_name, :introduction, :price, :adress, :image)
   end  
 end

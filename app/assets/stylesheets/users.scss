@@ -48,11 +48,12 @@
   margin-left: 20px;
 }
 
-.login {
+.signup, .login {
   text-decoration: none;
   font-size: 16px;
   margin-left: 20px;
   color: #579dff;
+  margin-left: 50px;
 }
 
 .user_name {
@@ -91,4 +92,18 @@
 
 .button.profile_button {
   width: 200px;
+}
+
+/* login */
+
+.user_input ul li > input {
+  margin-left: 10px;
+  width: 300px;
+  font-size: 16px;
+}
+
+.button.login_button {
+  margin-left: 50px;
+  width: 400px;
+  height: 50px;
 }

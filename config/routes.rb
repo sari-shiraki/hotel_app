@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
   root 'top#hello' #トップページ
+  post '/', to: 'top#hello'
+  
   get '/signup', to:'users#new'
   get 'users/index', to: 'users#index'
   get '/users/:id', to: 'users#show'
   get '/users/profile/:id', to:'users#edit'
   patch '/users/profile/:id', to: 'users#update'
+  get '/login', to: 'users#login_form'
+  post '/login', to: 'users#login'
+  post '/logout', to: 'users#logout'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :hotels
   resources :users

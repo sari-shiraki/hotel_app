@@ -22,7 +22,16 @@
         <input></input>
       </div>
       <div class="user_menus">
-        <h4>名前</h4>
+        <% if @current_user %>
+          <li>
+            <%= link_to @current_user.name, "/users/#{@current_user.id}/edit" %>
+            <%= link_to "ログアウト", logout_path, {method:"post"} %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "ログイン", login_path, class:"button header_button" %>
+          </li>
+        <% end %>  
         <img class="header_user_image" alt="ユーザ写真" src ="https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg">
       </div>
     </header>

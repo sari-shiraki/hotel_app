@@ -2,7 +2,7 @@
   <div class="user_create_area">
     <p>新しいアカウントを作成</p>
     <div class="user_input">
-      <%= form_for @user, url: users_path do |f| %>
+      <%= form_for @user, url: root_path do |f| %>
         <ul>
           <li>
             <p class="necessary">必須</p>
@@ -14,17 +14,17 @@
           </li>
           <li>
             <p class="necessary">必須</p>
-            <%= f.text_field :password_digest, placeholder:"パスワード", class:"user_input_place" %>
+            <%= f.text_field :password, placeholder:"パスワード", class:"user_input_place" %>
           </li>
           <li>
             <p class="necessary">必須</p>
-            <%= f.text_field :password_digest, placeholder:"パスワード確認", class:"user_input_place" %>
+            <%= f.text_field :password, placeholder:"パスワード確認", class:"user_input_place" %>
           </li>
           <li>
             <%= f.submit '新しいアカウントを作成', class:"button new_user_button" %>
           </li>
           <li>
-            <%= link_to "すでにアカウントをお持ちの方はログイン", users_path, class:"login" %>
+            <%= link_to "すでにアカウントをお持ちの方はログイン", 'login', class:"login" %>
           </li>
         </ul>
       <% end %>
